@@ -1,3 +1,4 @@
+// initial rendering of the ALL React DOM
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './containers/index.css';
