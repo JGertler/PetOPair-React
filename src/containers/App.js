@@ -1,60 +1,15 @@
 import React, { Component } from 'react';
-import logo from '../images/logo.svg';
 import './App.css';
+import SideNav from 'components/Navigation';
+import { Modal, Input, Button} from 'react-materialize';
+
 
 class App extends Component {
   render() {
     return (
 <div className="main-content">
-<ul id="slide-out" className="side-nav">
-  <li>
-    <div className="user-view">
-      <div className="background">
-        <img src=""/>
-      </div>
-      <a href="#!user"><img className="miniUserPic" src="/media/profPic.jpg"/></a>
-      <a href="#!name"><span className="green-text name">Susie Smith</span></a>
-      <a href="#!email"><span className="green-text email">meowcatmeow@gmail.com</span></a>
-    </div>
-  </li>
-  <li><a href="/profile"><i className="material-icons">account_circle</i>My Pet Profile</a></li>
-  <li>
-    <div className="divider"></div>
-  </li>
-  <li><a className="subheader">Activity</a></li>
-  <li><a href="#!">Notifications</a></li>
-  <li><a className="waves-effect" href="/bulletinboard">My Neighborhood Bulletin</a></li>
-  <li><a className="waves-effect" href="/sugar">My Cups of Sugar</a></li>
-  <li><a className="waves-effect" href="/sugar">Log Out</a></li>
-</ul>
 
-
-  <nav className="lighten-1" role="navigation">
-    <div className="nav-wrapper" id="navbar">
-      <button data-activates="slide-out" className="button-toggle-profile waves-effect waves-light btn " id="button-toggle-profile">Navigate Pet Opair</button>
-      <a id="logo-container" href="/" className="brand-logo"><img className="navLogo" src="/media/Petopair.png"/></a>
-      <ul id="dropdown1" className="dropdown-content">
-        <li><a href="badges.html">About</a></li>
-        <li className="divider"></li>
-        <li><a href="#!">Contact</a></li>
-        <li className="divider"></li>
-        <li><a href="#!">Disclaimer</a></li>
-      </ul>
-
-      <ul className="right hide-on-med-and-down">
-        <li><a href="badges.html">About</a></li>
-        <li><span>|</span></li>
-        <li><a href="#!">Contact</a>|</li>
-        <li><span>|</span></li>
-        <li><a href="#!">Disclaimer</a></li>
-
-      </ul>
-      <ul className="right show-on-med-and-down hide-on-large-only  ">
-        <li><a className="dropdown-button" href="#!" data-activates="dropdown1"><i className="material-icons right">menu</i></a></li>
-      </ul>
-    </div>
-  </nav>
-
+  <SideNav trigger={<Button className="button-toggle-profile waves-effect waves-light btn">Sniff Around</Button>} options={{ closeOnClick: true }}/>
 
   <div className="section no-pad-bot petBackground" id="index-banner">
     <div className="container">
@@ -64,10 +19,8 @@ class App extends Component {
       </div>
       <div className="row center">
         <a href="/signup" id="signUpButton" className="btn-large waves-effect waves-light">Sign Up</a>
-        <button type="button" className="btn-large waves-effect waves-light" data-toggle="modal" data-target="#myModal">Login</button>
+      <Modal/>
       </div>
-
-
       <div className="container">
         <div className="section">
           <div className="row">
@@ -138,28 +91,6 @@ class App extends Component {
         </div>
       </div>
     </footer>
-
-    <div className="container">
-      <div className="modal fade" id="myModal" role="dialog">
-        <div className="modal-dialog">
-
-          <div className="wrapper modalContainer">
-            <form className="form-signin">
-              <button type="button" className="close" data-dismiss="modal">&times;</button>
-              <h2 className="form-signin-heading">Please login</h2>
-              <div id="error-div"></div>
-              <input type="text" className="form-control" name="username" placeholder="Username" id="login-name" required="" autoFocus=""/>
-              <input type="password" className="form-control" name="password" id="login-password" placeholder="Password" required=""/>
-              <label className="checkbox">
-              <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"/> Remember me</label>
-              <button className="btn btn-lg btn-primary btn-block" type="submit" id="login-btn">Login</button>
-            </form>
-            <p>Need an account? <a href="/signup">Signup</a></p>
-            <p>Or go <a href="/">home</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
 </div>
 </div>
     );
