@@ -8,7 +8,7 @@ class SignInModal extends Component {
           <Modal trigger={<Button className="btn-large waves-effect waves-light">LOGIN</Button>}>
           <div className='modalContainer'>
           <Row className="form-signin">
-            <header className="form-signin-heading">Please login</header>
+            <h4 className="form-signin-heading">Please login</h4>
             <Row id="error-div"></Row>
               <Input type="text" className="form-control" name="username" placeholder="Username" id="login-name" required="" autoFocus=""/>
               <Input type="password" className="form-control" name="password" id="login-password" placeholder="Password" required=""/>
