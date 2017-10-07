@@ -5,7 +5,7 @@ import SignInModal from 'components/SignInModal';
 import {Button, Modal} from 'react-materialize';
 
 
-class App extends Component {
+class LandingPage extends Component {
   render() {
     return (
 <div className="main-content">
@@ -20,7 +20,7 @@ class App extends Component {
       </div>
       <div className="row center">
         <a href="/signup" id="signUpButton" className="btn-large waves-effect waves-light">Sign Up</a>
-      <SignInModal trigger={<Button className="btn-large waves-effect waves-light">LOGIN</Button>}/>
+      <SignInModal/>
       </div>
       <div className="container">
         <div className="section">
@@ -98,4 +98,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default LandingPage;

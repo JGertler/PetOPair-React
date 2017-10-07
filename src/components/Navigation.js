@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import reactDOM from 'react-dom';
 import { Button, SideNavItem, SideNav} from 'react-materialize';
 
 
@@ -25,7 +26,7 @@ class Navigation extends Component {
                 <SideNavItem waves href='/bulletin'>My Neighborhood Bulletin</SideNavItem>
                 <SideNavItem href='/'>Logout</SideNavItem>
               </SideNav>
-              <a id="logo-container" href="/" className="brand-logo"><img className="navLogo" alt= "main logo" src="/media/Petopair.png"/></a>
+              <a id="logo-container" href="/" className="brand-logo"><img className="navLogo" src="/media/Petopair.png"/></a>
               <ul id="dropdown1" className="dropdown-content">
                 <li><a href="badges.html">About</a></li>
                 <li className="divider"></li>
