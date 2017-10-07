@@ -5,7 +5,7 @@ import './containers/index.css';
 import LandingPage from './containers/LandingPage';
 import registerServiceWorker from './components/registerServiceWorker';
 // using ES6 modules
-import { Router, Route, Switch } from 'react-router'
+// import { Router, Route, Switch } from 'react-router'
 
 // using CommonJS modules
 // var Router = require('react-router').Router
