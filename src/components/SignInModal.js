@@ -5,8 +5,8 @@ import { Modal, Button, Row, Input} from 'react-materialize';
 class SignInModal extends Component {
     render() {
         return (
-          <Modal>
-          {/* <div className='modalContainer'> */}
+          <Modal trigger={<Button className="btn-large waves-effect waves-light">LOGIN</Button>}>
+          <div className='modalContainer'>
           <Row className="form-signin">
             <header className="form-signin-heading">Please login</header>
             <Row id="error-div"></Row>
@@ -16,7 +16,7 @@ class SignInModal extends Component {
               <Input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"/> Remember me</label>
               <Button className="btn btn-lg btn-primary btn-block" type="submit" id="login-btn">Login</Button>
           </Row>
-          {/* </div> */}
+          </div>
             <p>Need an account? <a href="/signup">Signup</a></p>
             <p>Or go <a href="/">home</a>.</p>
           </Modal>
