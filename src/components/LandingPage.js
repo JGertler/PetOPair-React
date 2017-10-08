@@ -4,7 +4,6 @@ import SignInModal from 'components/SignInModal';
 import Footer from 'components/Footer'
 import {Button} from 'react-materialize';
 
-
 class LandingPage extends Component {
   render() {
     return (

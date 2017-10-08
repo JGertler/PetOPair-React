@@ -1,9 +1,10 @@
+// initial rendering of the ALL React DOM using ES6 modules
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Navigation from 'components/LandingPage';
 // import '/containers/App.css';
 import LandingPage from 'components/LandingPage';
-// initial rendering of the ALL React DOM using ES6 modules
+import SignUp from 'components/Carousel';
 
 import './containers/index.css';
 import registerServiceWorker from './components/registerServiceWorker';
@@ -19,12 +20,11 @@ class Main extends Component {
          super(props);
          //history API (compatible with most browsers)
          this.history = window.history;
-
          this.getRouteCurrent = this.getRouteCurrent.bind(this);
          this.linkClicked = this.linkClicked.bind(this);
          this.updateDisplay = this.updateDisplay.bind(this);
      }
-     //
+     //creating variable getRouteCurrent, which should read the html route
     getRouteCurrent() {
         const stringRouteCurrentFull = String(document.location);
         const arrayRouteCurrentParts = stringRouteCurrentFull.split('/');
@@ -36,32 +36,16 @@ class Main extends Component {
         this.updateDisplay();
     }
     updateDisplay() {
-        // document.querySelectorAll('.content-navigation').forEach(element => {
-        //     element.style.display = 'none';
-        // });
 
+      //front end routes
+console.log("hello")
         var stringRouteCurrent = this.getRouteCurrent();
 
         if (stringRouteCurrent === 'main') {
-            document.querySelector('#LandingPage').style.display = 'block';
+            document.querySelector('#landingPageDiv').style.display = 'block';
         }
-        else if (stringRouteCurrent === 'staff') {
-            document.querySelector('.Staff').style.display = 'block';
-        }
-        else if (stringRouteCurrent === 'about') {
-            document.querySelector('.About').style.display = 'block';
-        }
-        else if (stringRouteCurrent === 'menu') {
-            document.querySelector('.Menu').style.display = 'block';
-        }
-        else if (stringRouteCurrent === 'calendar') {
-            document.querySelector('.Calendar').style.display = 'block';
-        }
-        else if (stringRouteCurrent === 'badges') {
-            document.querySelector('.Badges').style.display = 'block';
-        }
-        else if (stringRouteCurrent === 'messaging') {
-            document.querySelector('.Messaging').style.display = 'block';
+        else if (stringRouteCurrent === 'signup') {
+            document.querySelector('#signUpDiv').style.display = 'block';
         }
         else {
             this.history.replaceState(null, "patrons", "patrons");
@@ -72,7 +56,10 @@ class Main extends Component {
     }
 };
 
-ReactDOM.render(<LandingPage />, document.getElementById('LandingPage'));
+ReactDOM.render(<LandingPage />, document.getElementById('landingPageDiv'));
 registerServiceWorker();
 
-export default Navigation;
+// ReactDOM.render(<SignUp/>, document.getElementById('signUpDiv'));
+// registerServiceWorker();
+
+export default Main;
