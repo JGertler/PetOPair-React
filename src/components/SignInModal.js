@@ -14,8 +14,7 @@ class SignInModal extends Component {
           <Col s={12} id="error-div">
               <Input type="password" className="form-control" name="password" id="login-password" placeholder="Password" required=""/>
           </Col>
-            <label className="checkbox">
-              <Input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"/> Remember me</label>
+              <Input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe" defaultValue='checked' label='Remember Me'/>
               <Button className="btn btn-lg btn-primary btn-block" type="submit" id="login-btn">Login</Button>
             <p>Need an account? <a href="/signup">Signup</a></p>
             <p>Or go <a href="/">home</a>.</p>
