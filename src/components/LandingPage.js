@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
-import Navigation from 'components/Navigation';
+import Navigation from 'components/Navigation'
 import SignInModal from 'components/SignInModal';
-import {Button, Modal} from 'react-materialize';
+import {Button} from 'react-materialize';
 
 
 class LandingPage extends Component {
@@ -14,7 +13,7 @@ class LandingPage extends Component {
 
   <div className="section no-pad-bot petBackground" id="index-banner">
     <div className="container">
-      <h1 className="header center col s6"><img className="mainLogo bounceIn" alt="main logo" src="/media/Petopair.png"/></h1>
+      <h1 className="header center col s6"><img className="mainLogo animated bounceIn" alt="main logo" src="/media/Petopair.png"/></h1>
       <div className="row center">
         <h5 className="header col s12 light">A co-op for neighbors to exchange free petsitting favors. Meow. Woofwoof.</h5>
       </div>
@@ -97,5 +96,6 @@ class LandingPage extends Component {
     );
   }
 }
+
 
 export default LandingPage;
