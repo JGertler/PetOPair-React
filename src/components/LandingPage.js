@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from 'components/Navigation'
 import SignInModal from 'components/SignInModal';
+
 import Footer from 'components/Footer'
 import {Button} from 'react-materialize';
 
