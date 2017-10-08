@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Navigation from 'components/Navigation'
 import SignInModal from 'components/SignInModal';
-import Footer from 'components/Footer';
+
+import Footer from 'components/Footer'
 import {Button} from 'react-materialize';
 
 
@@ -57,8 +58,6 @@ class LandingPage extends Component {
 
         </div>
       </div>
-
-
     </div>
   <Footer/>
 </div>
